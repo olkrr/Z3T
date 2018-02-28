@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+			"": "src/"
+		}
+    },
+    "require": {
+        "kint-php/kint": "dev-master"
+    }    
+}
