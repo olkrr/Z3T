@@ -6,12 +6,17 @@
         public static $IDKlient     = 'IDKlient'    ;
         public static $IDProducent  = 'IDProducent' ;        
         public static $NazMyjki     = 'NazMyjki'    ;
-        public static $TypMyjki     = 'TypMyjki'    ;
-        public static $NrOsprzet    = 'NrOsprzet'   ;
-        public static $Wycena       = 'Wycena'      ;
-        public static $DataDost     = 'DataDost'    ;
-        public static $DataOdbi     = 'DataOdbi'    ;
-        public static $KwotaNap     = 'KwotaNap'    ;
-        public static $OpisNapr     = 'OpisNapr'    ;
+        public static $IDTypMyjki   = 'IDTypMyjki'  ;
+        public static $IDOsprzet    = 'IDOsprzet'   ;
+        public static $CzyWycena       = 'CzyWycena';
+        public static $Symptomy = 'Symptomy';
+        public static $Diagnoza = 'Diagnoza';
+        public static $OpisNaprawy     = 'OpisNaprawy'    ;
+        public static $Czesci = 'Czesci';
+        public static $DataDostarczenia     = 'DataDostarczenia';
+        public static $DataOdbioru     = 'DataOdbioru'    ;
         public static $IDStatus     = 'IDStatus'    ;
+        public static $KwotaNaprawy     = 'KwotaNaprawy'    ;
+        public static $Kartka = 'Kartka' ;
+        public static $Kontakt = 'Kontakt';   
     }

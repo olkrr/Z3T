@@ -6,7 +6,11 @@
         public static $Imie = 'Imie';
 		public static $Nazwisko = 'Nazwisko';
 		public static $NazwaFirmy = 'NazwaFirmy';
-		public static $Telefon = 'Telefon';
+		public static $NumerTelefonu = 'NumerTelefonu';
 		public static $Email = 'Email';
-        public static $Nip = 'Nip';
+        public static $Ulica = 'Ulica';
+        public static $NumerDomu = 'NumerDomu';
+        public static $Miejscowosc = 'Miejscowosc';
+        public static $KodPocztowy = 'KodPocztowy';
+        public static $Uwagi = 'Uwagi';
     }

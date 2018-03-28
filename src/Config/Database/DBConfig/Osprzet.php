@@ -2,6 +2,6 @@
 	namespace Config\Database\DBConfig;
 
     class Osprzet {
-        public static $NrOsprzet = 'NrOsprzet';
-        public static $NazOsprzet = 'NazOsprzet';   
+        public static $IDOsprzet = 'IDOsprzet';
+        public static $OsprzetNazwa = 'OsprzetNazwa';   
     }

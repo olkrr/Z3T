@@ -3,5 +3,5 @@
 
     class Producent {
         public static $IDProducent = 'IDProducent';
-        public static $NazProducent = 'NazProducent';   
+        public static $ProducentNazwa = 'ProducentNazwa';   
     }

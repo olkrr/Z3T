@@ -3,5 +3,5 @@
 
     class Status {
         public static $IDStatus = 'IDStatus';
-        public static $NazStatus = 'NazStatus';
+        public static $StatusNazwa = 'StatusNazwa';
     }

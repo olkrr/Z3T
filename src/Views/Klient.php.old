@@ -1,0 +1,40 @@
+<?php
+    namespace Views;
+    
+    class Klient extends View
+    {
+        public function getAll($data = null)
+        {
+            if(isset($data['message']))
+                $this->set('message',$data['message']);
+            if(isset($data['error']))
+                $this->set('error',$data['error']); 
+            $model = $this->getModel('Klient');
+            
+            $data = $model->getAll();
+			$this->set('klienci', $data['klienci']);
+    
+            if(isset($data['error']))
+                $this->set('error', $data['error']);
+            $this->set('customScript', array('datatables.min', 'table.min'));
+			$this->render('KlientGetAll');
+		}
+        
+         public function addform()
+         {
+            $this->set('customScript', array('jquery.validate.min', 'KlientAddForm'));
+			$this->render('KlientAddForm');
+        }
+        
+        public function editform($klient){
+            $this->set('IDKlient', $klient[\Config\Database\DBConfig\Klient::$IDKlient]);
+            $this->set('Imie', $klient[\Config\Database\DBConfig\Klient::$Imie]);
+            $this->set('Nazwisko', $klient[\Config\Database\DBConfig\Klient::$Nazwisko]);
+            $this->set('NazwaFirmy', $klient[\Config\Database\DBConfig\Klient::$NazwaFirmy]);
+            $this->set('Telefon', $klient[\Config\Database\DBConfig\Klient::$Telefon]);
+            $this->set('Email', $klient[\Config\Database\DBConfig\Klient::$Email]);
+            $this->set('Nip', $klient[\Config\Database\DBConfig\Klient::$Nip]);
+            $this->set('customScript', array('jquery.validate.min', 'KlientAddForm'));
+			$this->render('KlientEditForm');
+        }   
+    }
