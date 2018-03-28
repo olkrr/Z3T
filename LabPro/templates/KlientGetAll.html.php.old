@@ -1,0 +1,54 @@
+{extends file="Main.html.php"}
+{block name=title}Lista pokoi{/block}
+{block name=body}
+<h1>Lista pokoi</h1>
+{if isset($Klienci)}
+{if $klienci|@count === 0}
+	<b>Brak pokoi w bazie!</b><br/><br/>
+{else}
+<
+<table>
+   
+       <thead>
+      <tr>
+        <td><a>ID Klienta</a></td>
+        <td>Imie</td>
+        <td>Nazwisko</td>
+        <td>Nazwa Firmy</td>
+        <td>Telefon</td>
+        <td>Email</td>
+        <td>Nip</td>
+      
+        <td></td>
+       <!-- <td></td-->
+       <td></td>
+    </tr>
+	</thead>
+	<tbody>
+    {foreach $klienci as $id => $klient}
+        
+        <tr>
+                    <td>{$klient['IDKlient']	</td>
+                    <td>{$klient['Imie']		</td>
+                    <td>{$klient['Nazwisko']	</td>
+                    <td>{$klient['NazwaFirmy']	</td>
+                    <td>{$klient['Telefon']		</td>
+                    <td>{$klient['Email']		</td>
+                    <td>{$klient['Nip']			</td>
+            
+<td><a href="http://{$smarty.server.HTTP_HOST}{$subdir}Klient/edit/{$id}">edytuj</a></td>
+            
+ <td><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo \Config\Website\Config::$subdir?>Klient/delete/<?= $klient['IDKlient']; ?>">usuń</a></td>
+<!--<td><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo \Config\Website\Config::$subdir?>Naprawa/getOne/<?= $klient['IDKlient'];?>">Wyświetl Naprawy</a></td>-->
+<td><a href="http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo \Config\Website\Config::$subdir?>Naprawa/addform/<?= $klient['IDKlient'];?>">Dodaj Naprawę</a></td>
+                </tr>
+    <?php }}
+	else echo "BRAK Klientów";	
+	?>
+	</tbody>
+</table>
+<strong><?= $this->get('error')?></strong>
+<strong><?= $this->get('message')?></strong>
+<br/><br/>
+<a href="http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo \Config\Website\Config::$subdir?>Klient/addform">Dodaj Klienta</a>
+<?php include 'templates/footer.html.php'; ?>
